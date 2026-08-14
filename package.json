@@ -4,11 +4,11 @@
   "description": "Event Management Platform",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./build/src/index.js",
+    "start": "node api.js && npm run build && node ./build/src/index.js",
     "start:dev": "nodemon --exec babel-node ./src/index.js",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build/src/ ./src/ -s",
-    "build": "npm run build-babel"
+    "build": "node api.js && npm run build-babel"
   },
   "author": "John Muhoza",
   "license": "ISC",
